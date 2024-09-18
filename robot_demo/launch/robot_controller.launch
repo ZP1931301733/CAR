@@ -1,0 +1,23 @@
+<launch>
+
+  <!-- Load joint_controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find robot_demo)/config/joint_controller.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="joint_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="joint1_controller
+                          joint2_controller
+                          joint3_controller
+                          joint4_controller"/>
+
+  <!-- Load wheel_controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find robot_demo)/config/wheel_controller.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="wheel_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="wheel1_controller
+                          wheel2_controller
+                          wheel3_controller
+                          wheel4_controller"/>
+
+</launch>

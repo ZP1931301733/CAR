@@ -1,0 +1,8 @@
+float64 joint1_angle
+float64 joint2_angle
+float64 joint3_angle
+float64 joint4_angle
+float64 wheel1_speed
+float64 wheel2_speed
+float64 wheel3_speed
+float64 wheel4_speed

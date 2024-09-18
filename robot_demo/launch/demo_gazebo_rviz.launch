@@ -1,0 +1,13 @@
+<launch>
+
+    <include file="$(find robot_demo)/launch/rviz.launch"/>
+
+    <include file="$(find robot_demo)/launch/gazebo.launch"/>
+
+    <include file="$(find robot_demo)/launch/robot_controller.launch"/>
+
+    <include file="$(find robot_demo)/launch/pointcloud_to_laserscan.launch"/>
+
+    <include file="$(find robot_demo)/launch/gmapping.launch"/>
+
+</launch>
