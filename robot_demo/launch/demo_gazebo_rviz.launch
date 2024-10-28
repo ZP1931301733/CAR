@@ -8,6 +8,6 @@
 
     <include file="$(find robot_demo)/launch/pointcloud_to_laserscan.launch"/>
 
-    <include file="$(find robot_demo)/launch/gmapping.launch"/>
+    <!-- <include file="$(find robot_demo)/launch/gmapping.launch"/> -->
 
 </launch>

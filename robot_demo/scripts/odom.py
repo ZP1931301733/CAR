@@ -2,16 +2,14 @@
 '''
 This script makes Gazebo less fail by translating gazebo status messages to odometry data.
 Since Gazebo also publishes data faster than normal odom data, this script caps the update to 20hz.
-Winter Guerra
 '''
 import rospy
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Pose, Twist, Transform, TransformStamped
 from gazebo_msgs.msg import LinkStates
 from std_msgs.msg import Header
-import numpy as np
-import math
 import tf2_ros
+
 class OdometryNode:
     # Set publishers
     pub_odom = rospy.Publisher('/odom', Odometry, queue_size=1)

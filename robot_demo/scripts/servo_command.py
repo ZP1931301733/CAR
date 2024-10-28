@@ -22,7 +22,6 @@ class command_pub:
         throttle = data.drive.speed*4.474
         steer = data.drive.steering_angle
 
-        ic(1)
         self.wheel1.publish(throttle)
         self.wheel2.publish(throttle)
         self.wheel3.publish(throttle)
@@ -40,8 +39,8 @@ class command_pub:
 if __name__ == '__main__':
    
     command_pub = command_pub()
-    while not rospy.is_shutdown():    
-        try:
-            command_pub.servo_commands()
-        except rospy.ROSInterruptException:
-            pass
+    try:
+        command_pub.servo_commands()
+    except rospy.ROSInterruptException:
+        pass
+    rospy.spin()

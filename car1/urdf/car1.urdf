@@ -548,7 +548,7 @@
   <joint name="support2baselink" type="fixed">
       <parent link="base_link"/>
       <child link="laser_support"/>
-      <origin rpy="0 0 0" xyz="0.56525 0 0.05"/>
+      <origin rpy="0 0 0" xyz="0.64 0 0.05"/>
   </joint>
   <link name="laser">
       <visual>
@@ -583,7 +583,7 @@
       <ray>
         <scan>
           <horizontal>
-            <samples>1000</samples> 
+            <samples>1800</samples> 
             <resolution>1</resolution>
             <min_angle>-1.57</min_angle>
             <max_angle> 1.57</max_angle>
@@ -591,13 +591,13 @@
           <vertical>
             <samples>32</samples>
             <resolution>1</resolution>
-            <min_angle>-0.78</min_angle>
+            <min_angle>-0.87</min_angle>
             <max_angle> 0.2</max_angle>
           </vertical>
         </scan>
         <range>
           <min>0.05</min>
-          <max>20.0</max>
+          <max>16</max>
           <resolution>0.2</resolution>
         </range>
         <noise>
@@ -610,7 +610,7 @@
         <topicName>/rslidar_points</topicName>
         <frameName>laser</frameName>
         <min_range>0.1</min_range>
-        <max_range>20.0</max_range>
+        <max_range>16</max_range>
         <gaussianNoise>0.0</gaussianNoise>
       </plugin>
     </sensor>
